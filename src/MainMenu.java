@@ -36,7 +36,7 @@ public class MainMenu extends Admin {
         while(true) {
             System.out.println("Press 1. to log in as admin");
             System.out.println("Press 2. to log in as an employee ");
-            System.out.println("Press 3 to exit");
+            System.out.println("Press 3 to exit ");
             int choice2 = sc.nextInt();
 
             if (choice2 == 1) {
