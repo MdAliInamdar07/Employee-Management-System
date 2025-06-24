@@ -32,7 +32,7 @@ public class MainMenu extends Admin {
 
         MainMenu ob = new MainMenu();
         System.out.println("Press 1. to log in as admin");
-        System.out.println("Press 2. to log in as an employee");
+        System.out.println("Press 2. to log in as an employee ");
 
         int choice2 = sc.nextInt();
 
