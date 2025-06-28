@@ -6,8 +6,8 @@ public class Admin
     int input , id;
     String name,department;
     HashMap< Integer , Admin> map = new HashMap<>();
-    public Admin() {
-        // default constructor
+    public Admin(){
+        // default constructor **
     }
     public Admin(String name , String department){
 
@@ -21,7 +21,7 @@ public class Admin
             System.out.println("Press 1. to insert an employee record.");
             System.out.println("Press 2. to get records of all employees inserted.");
             System.out.println("Press 3. to remove an employee record.");
-            System.out.println("Press 4 to exit");
+            System.out.println("Press 4 to return it to main menu");
             input = sc.nextInt();
 
             switch (input) {
@@ -41,7 +41,7 @@ public class Admin
                     }
                     break;
 
-                case 2:
+                case 2:                                    //***
                     for (Map.Entry<Integer, Admin> e : map.entrySet()) {
                         int key = e.getKey();
                         Admin emp = e.getValue();
@@ -65,8 +65,11 @@ public class Admin
                     }
                     break;
                 case 4:
-                    System.out.println("Thank you");
-                    System.exit(0);
+                    String[] arguments = {};
+                    MainMenu.main(arguments);
+
+                    //System.out.println("Thank you");
+                    //System.exit(0);
             }
         }
     }

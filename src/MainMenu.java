@@ -27,10 +27,10 @@ public class MainMenu extends Admin {
                     break;
                 case 3 :
                     System.exit(0);
-            }
+                }
+            }    
     }
-
-    public static void main(String []args){
+         public static void main(String []args){
 
         MainMenu ob = new MainMenu();
         while(true) {
@@ -45,6 +45,7 @@ public class MainMenu extends Admin {
                 ob.menuForE();
             }
             else if (choice2 == 3) {
+                System.out.println("Thank you");
                 System.exit(0);
             }
         }
