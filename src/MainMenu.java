@@ -7,7 +7,7 @@ public class MainMenu extends Admin {
         while(true){
             System.out.println("Press '1' to check another employee's ID");
             System.out.println("Press 2 to look at details of employee");
-            System.out.println("Press 3 to exit");
+            System.out.println("Press 3 to return to main menu");
             choice1 = sc.nextInt();
 
             switch(choice1){
@@ -16,17 +16,28 @@ public class MainMenu extends Admin {
                     System.out.println("Enter the Employee ID to be checked");
                     key = sc.nextInt();
                     if(map.containsKey(key)){
-                        System.out.println("Yes, the key is present");
+                        System.out.println("Yes, the employee is present");
+                    }
+                    else{
+                        System.out.println("Employee not found");
                     }
                     break;
 
                 case 2 :
                     System.out.println("Enter the Employee ID for the details to be searched.");
                     key = sc.nextInt();
-                    System.out.println("Employee details : " +map.get(key));
+                    if(map.containsKey(key)) {
+                        System.out.println("Employee details : " + map.get(key));
+                    }
+                    else{
+                        System.out.println("Employee not found");
+                    }
                     break;
                 case 3 :
-                    System.exit(0);
+                    String[] arguments = {};
+                    MainMenu.main(arguments);
+                default:
+                    System.out.println("This is not a valid option");
                 }
             }    
     }
